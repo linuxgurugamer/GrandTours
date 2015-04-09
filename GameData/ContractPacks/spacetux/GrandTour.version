@@ -1,0 +1,18 @@
+{
+	"NAME":"Contract Pack: Grand Tour Contracts",
+	"URL":"http://ksp-avc.cybutek.net/version.php?id=135",
+	"DOWNLOAD":"https://kerbalstuff.com/mod/689/ContractPack:%20Grand%20Tours/download/0.1.0",
+	"VERSION":
+	{
+		"MAJOR":0,
+		"MINOR":1,
+		"PATCH":0,
+		"BUILD":0
+	},
+	"KSP_VERSION":
+	{
+		"MAJOR":0,
+		"MINOR":90,
+		"PATCH":0
+	}
+}

@@ -1,0 +1,7 @@
+			PARAMETER
+			{
+				name = ReachState
+				type = ReachState
+				targetBody = <PLANET>
+				disableOnStateChange = true
+			}

@@ -1,0 +1,82 @@
+
+// License is CC BY-NC-SA 4.0
+// https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+///////////////////////////////////////
+//
+// Grand Tour Inner Planet
+//
+///////////////////////////////////////
+
+CONTRACT_TYPE
+{
+	name = <CONTRACT_TOURNAME>
+	group = SpaceTuxGroup
+	title = Do a grand tour of <THE><TOURNAME>
+
+	description = Our sponser would like to do a tour of <THE><TOURNAME><LAND> and then return home
+
+	notes = Complete the following:
+	synopsis = Fly by <THE><TOURNAME>: <PLANETNAMES><LAND>
+	completedMessage = You did it! You've successly flown by each planet<LAND>
+	agent = Space Penguins, Inc
+	cancellable = true
+	declinable = true
+	prestige = Significant
+	maxCompletions = 1
+	maxSimultaneous = 1
+	rewardScience = 25.0
+	rewardReputation = 5.0
+	rewardFunds = Random(40000.0, 80000.0)
+	advanceFunds = Random(10000.0, 20000.0)
+	weight = 99.0
+
+	REQUIREMENT
+	{
+		name = ReachSpace
+		type = ReachSpace
+	}
+	
+	PARAMETER
+	{
+		name = HasCrew
+		type = HasCrew
+		minCrew = 1
+	}
+	PARAMETER
+	{
+		type = VesselParameterGroup
+		PARAMETER
+		{
+			name = All
+			type = All
+			title = Do these things
+
+			PARAMETER
+			{
+				//name = Ready to launch
+				//type = ReachState
+				//targetBody = Kerbin
+				//situation = PRELAUNCH
+
+				name = LaunchVessel
+				type = LaunchVessel
+
+			}
+//////////
+<PLANETPARAMETER>
+//////////
+		}
+		PARAMETER
+		{
+			name = ReturnHome
+			type = ReturnHome
+
+			completeInSequence = true
+		// Text for the contract parameter.
+		// Default = Return home.
+		//title =
+		}
+	}
+}
+
