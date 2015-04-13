@@ -20,23 +20,10 @@ if [ "$1" = "mono" ]; then
 	exit
 fi
 
-#d=`date +%Y%m%d-%H:%m`
-#FILES="GrandTour.version"
-#for i in $FILES; do
-#	mv $i ${i}.$d
-#	sed "s/<MAJOR>/$major/g" ${i}.template | sed "s/<MINOR>/$minor/g" | sed "s/<PATCH>/$patch/g" >$i
-#done
-
 [ "$1" = "version" ] && exit
 
-#if [ "$1" = "nopatch" ]; then
-#	shift
-#else
-#	patch=$((patch+ 1))
-#	echo $patch>patch-number.txt
-#fi
-
+f=GameData/ContractPacks/SpacetuxSA
 cd ~/install
 rm -f ${releasedir}/GrandTours-${major}.${minor}.${patch}.zip
-echo "zip -9r ${releasedir}/GrandTours-${major}.${minor}.${patch}.zip  $1"
-zip -9r ${releasedir}/GrandTours-${major}.${minor}.${patch}.zip  $1
+echo "zip -9r ${releasedir}/GrandTours-${major}.${minor}.${patch}.zip  $f"
+zip -9r ${releasedir}/GrandTours-${major}.${minor}.${patch}.zip  $f

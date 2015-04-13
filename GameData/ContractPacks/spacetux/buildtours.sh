@@ -5,6 +5,23 @@ templatefile=cfg.template
 parameterfile=planetparameter.template
 landedfile=landed.template
 
+KerbolMultiplier="2"
+MohoMultiplier="7"
+EveMultiplier="5"
+GillyMultiplier="6"
+KerbinMultiplier="1.5"
+MunMultiplier="2"
+MinmusMultiplier="2.5"
+DunaMultiplier="5"
+IkeMultiplier="5"
+DresMultiplier="6"
+JoolMultiplier="6"
+LaytheMultiplier="8"
+VallMultiplier="8"
+TyloMultiplier="8"
+BopMultiplier="8"
+PolMultiplier="8"
+EelooMultiplier="10"
 
 tourlist=(
 	"inner_planets,Moho,Eve"
@@ -96,11 +113,14 @@ do
 		planetnames=""
 		contractTourname="${t}${land}"
 
+		multiplier=$((landed + 1))
 		for i2 in `seq 1 $((numElements-1))`; do
 			oIFS=$IFS
 			IFS=
 			[ $i2 -gt 1 ] && planetnames="$planetnames, "
 			planetnames="${planetnames}${linearray[$i2]}"
+v="${linearray[$i2]}Multiplier"
+multiplier="${multiplier} * ${!v}"
 			IFS=$oIFS
 		done
 
@@ -108,7 +128,7 @@ do
 		while IFS='' read -r var ; do
 			oIFS=$IFS
 			IFS=
-			var=`echo $var | sed "s/<CONTRACT_TOURNAME>/$contractTourname/g" | sed "s/<TOURNAME>/$tourname/g" | sed "s/<PLANETNAMES>/$planetnames/g" | sed "s/<THE>/$the/g"`
+			var=`echo $var | sed "s/<CONTRACT_TOURNAME>/$contractTourname/g" | sed "s/<TOURNAME>/$tourname/g" | sed "s/<PLANETNAMES>/$planetnames/g" | sed "s/<THE>/$the/g" | sed "s/<REWARDMULTIPLIER>/$multiplier/g"`
 			if [ $landed -eq 0 ]; then
 				land=""
 			else
