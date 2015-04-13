@@ -10,7 +10,7 @@ BUILD_NUMBER_FILE=build-number.txt
 PATCH_NUMBER_FILE=patch-number.txt
 
 INSTALLDIR=~/install
-MODDIR=GameData/ContractPacks/SpacetuxSA/GrandTours
+MODDIR=GameData/ContractPacks/Spacetux/GrandTours
 
 OBJECTS=GrandTour.version License.txt CHANGELOG all_planets.grandtour.cfg   inner_planets.grandtour.cfg   outer_planets.grandtour.cfg all_planets.land.grandtour.cfg   inner_planets.land.grandtour.cfg  outer_planets.land.grandtour.cfg all_planets_and_moons.grandtour.cfg  inner_planets_and_moons.grandtour.cfg  outer_planets_with_moons.grandtour.cfg all_planets_and_moons.land.grandtour.cfg inner_planets_and_moons.land.grandtour.cfg outer_planets_with_moons.land.grandtour.cfg
 

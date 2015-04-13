@@ -22,7 +22,7 @@ fi
 
 [ "$1" = "version" ] && exit
 
-f=GameData/ContractPacks/SpacetuxSA
+f=" GameData/ContractPacks/Spacetux/SharedAssets GameData/ContractPacks/Spacetux/Grandtours"
 cd ~/install
 rm -f ${releasedir}/GrandTours-${major}.${minor}.${patch}.zip
 echo "zip -9r ${releasedir}/GrandTours-${major}.${minor}.${patch}.zip  $f"
