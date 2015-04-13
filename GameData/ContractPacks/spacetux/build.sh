@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ "$1" = "clean" ]; then
+	rm -f *.cfg
+	exit
+fi
 major=0
 major=`cat version-number.txt`
 minor=`cat build-number.txt`
