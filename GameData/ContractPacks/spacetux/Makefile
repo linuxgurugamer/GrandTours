@@ -17,6 +17,7 @@ OBJECTS=GrandTour.version License.txt CHANGELOG all_planets.grandtour.cfg   inne
 
 help:
 	@echo "Grand Tour build commands:"
+	@echo "make build           Create cfg files"
 	@echo "make install         Copy release files to install directory"
 	@echo "make release         Build a new tarfile, and update patch number"
 	@echo "make version         Increment the version and set build to 0"
