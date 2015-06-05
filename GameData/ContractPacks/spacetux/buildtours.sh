@@ -90,6 +90,8 @@ do
 	linearray=($(awk -F, '{$1=$1} 1' <<<"${tours[${i}]}"))	
 	numElements=${#linearray[@]}
 
+echo ${tours[${i}]}
+
 	for landed in 0 1; 
 	do
 		if [ $landed -eq 0 ]; then
@@ -108,6 +110,7 @@ do
 			tourname="all the ${tourname:4}"
 		fi
 		outfile="${t}${land}.grandtour.cfg"
+echo $outfile
 		rm -f $outfile
 		exec 1<>"$outfile"
 		planetnames=""

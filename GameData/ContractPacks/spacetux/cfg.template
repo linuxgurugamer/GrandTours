@@ -59,8 +59,10 @@ CONTRACT_TYPE
 				//targetBody = Kerbin
 				//situation = PRELAUNCH
 
-				name = LaunchVessel
-				type = LaunchVessel
+				name = Flying
+				type = ReachState
+				targetBody = Kerbin
+				situation = FLYING
 
 			}
 //////////
