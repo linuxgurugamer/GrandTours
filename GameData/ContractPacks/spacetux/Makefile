@@ -9,7 +9,7 @@ BUILD_NUMBER_FILE=build-number.txt
 # Name of text file containing patch number.
 PATCH_NUMBER_FILE=patch-number.txt
 
-INSTALLDIR=~/install
+INSTALLDIR=/cygdrive/d/users/jbb/install
 MODDIR=GameData/ContractPacks/Spacetux/GrandTours
 
 OBJECTS=GrandTour.version License.txt CHANGELOG all_planets.grandtour.cfg   inner_planets.grandtour.cfg   outer_planets.grandtour.cfg all_planets.land.grandtour.cfg   inner_planets.land.grandtour.cfg  outer_planets.land.grandtour.cfg all_planets_and_moons.grandtour.cfg  inner_planets_and_moons.grandtour.cfg  outer_planets_with_moons.grandtour.cfg all_planets_and_moons.land.grandtour.cfg inner_planets_and_moons.land.grandtour.cfg outer_planets_with_moons.land.grandtour.cfg
@@ -29,7 +29,7 @@ build:
 	./buildtours.sh 
 
 install:	$(OBJECTS)
-	@cd ~/github/SpaceTux/GameData/spacetux && make install
+	@cd /cygdrive/d/users/jbb/github/SpaceTux/GameData/spacetux && make install
 
 	@rm -fr $(INSTALLDIR)/$(MODDIR)/*
 	@mkdir -p $(INSTALLDIR)/$(MODDIR)

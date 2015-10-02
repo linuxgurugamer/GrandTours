@@ -123,7 +123,7 @@ echo $outfile
 			[ $i2 -gt 1 ] && planetnames="$planetnames, "
 			planetnames="${planetnames}${linearray[$i2]}"
 v="${linearray[$i2]}Multiplier"
-multiplier="${multiplier} * ${!v}"
+multiplier="${multiplier} + ${!v}"
 			IFS=$oIFS
 		done
 

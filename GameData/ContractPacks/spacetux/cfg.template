@@ -25,9 +25,9 @@ CONTRACT_TYPE
 	prestige = Significant
 	maxCompletions = 1
 	maxSimultaneous = 1
-	rewardScience = 25.0
-	rewardReputation = 5.0
-	rewardFunds = @advanceFunds * <REWARDMULTIPLIER>
+	rewardScience = Random(20.0, 30.0) * (<REWARDMULTIPLIER>)
+	rewardReputation = Random(5.0, 10.0) * (<REWARDMULTIPLIER>)
+	rewardFunds = @advanceFunds * (<REWARDMULTIPLIER>)
 	advanceFunds = Random(50000.0, 70000.0)
 	//weight = 99.0
 
