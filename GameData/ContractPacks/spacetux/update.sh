@@ -3,7 +3,7 @@
 echo -e "\n\n"
 
 releasedir=~/release
-releasedir=/cygdrive/d/users/jbb/release
+releasedir=/d/users/jbb/release
 mkdir -p $releasedir
 
 major=0
@@ -24,7 +24,7 @@ fi
 [ "$1" = "version" ] && exit
 
 f=" GameData/ContractPacks/Spacetux/SharedAssets GameData/ContractPacks/Spacetux/Grandtours"
-cd /cygdrive/d/users/jbb/install
+cd /d/users/jbb/install
 rm -f ${releasedir}/GrandTours-${major}.${minor}.${patch}.zip
 echo "zip -9r ${releasedir}/GrandTours-${major}.${minor}.${patch}.zip  $f"
 zip -9r ${releasedir}/GrandTours-${major}.${minor}.${patch}.zip  $f
