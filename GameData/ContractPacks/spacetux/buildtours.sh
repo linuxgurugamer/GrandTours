@@ -1,6 +1,8 @@
 #!/bin/bash
 
 
+cp group.template group.cfg
+
 templatefile=cfg.template
 parameterfile=planetparameter.template
 landedfile=landed.template
@@ -23,6 +25,18 @@ BopMultiplier="8"
 PolMultiplier="8"
 EelooMultiplier="10"
 
+# tourlist layout:
+# tour name (must begin with inner_planets, outer_planets, or all_panets)
+# prereq (none, planetName, MunOrMinmus, moonName, or tourName)
+# comma seperated list of planets to visit
+tourPrereqlist=(
+	"inner_planets,MunOrMinmus,Moho,Eve"
+	"inner_planets_and_moons,MunOrMinmus,Moho,Eve,Gilly"
+	"outer_planets,Duna,Dres,Jool,Eeloo"
+	"outer_planets_with_moons,Duna,Ike,Dres,Jool,Laythe,Vall,Tylo,Bop,Pol"
+	"all_planets,Moho,Eve,Duna,Dres,Jool,Eeloo"
+	"all_planets_and_moons,Mun,Minmus,Moho,Eve,Gilly,Duna,Ike,Dres,Jool,Laythe,Vall,Tylo,Bop,Pol"
+)
 tourlist=(
 	"inner_planets,Moho,Eve"
 	"inner_planets_and_moons,Moho,Eve,Gilly"

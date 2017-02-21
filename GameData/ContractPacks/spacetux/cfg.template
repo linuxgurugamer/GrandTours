@@ -11,7 +11,7 @@
 CONTRACT_TYPE
 {
 	name = <CONTRACT_TOURNAME>
-	group = SpaceTuxGroup
+	group = STGGrandTours
 	title = Do a grand tour of <THE><TOURNAME>
 
 	description = Our sponser would like to do a tour of <THE><TOURNAME><LAND> and then return home
